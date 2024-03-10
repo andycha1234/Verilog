@@ -4,3 +4,7 @@ This project is to introduce SystemVerilog and UVM to get a better understanding
 The original can be found here: 
 
 https://www.youtube.com/watch?v=2026Ei1wGTU&list=PLMXEtnd6GXENGdQ1rXB7dxtwBEf6qNj4f&index=5&t=273s
+
+Code can be viewed and run on EDA Playground here: 
+
+https://edaplayground.com/x/QfB3
