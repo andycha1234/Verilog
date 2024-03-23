@@ -1,0 +1,30 @@
+|mux2to1
+x[0] => m.IN0
+x[1] => m.IN0
+x[2] => m.IN0
+x[3] => m.IN0
+y[0] => m.IN0
+y[1] => m.IN0
+y[2] => m.IN0
+y[3] => m.IN0
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => led[9].DATAIN
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+m[0] << m.DB_MAX_OUTPUT_PORT_TYPE
+m[1] << m.DB_MAX_OUTPUT_PORT_TYPE
+m[2] << m.DB_MAX_OUTPUT_PORT_TYPE
+m[3] << m.DB_MAX_OUTPUT_PORT_TYPE
+led[4] << <GND>
+led[5] << <GND>
+led[6] << <GND>
+led[7] << <GND>
+led[8] << <GND>
+led[9] << s.DB_MAX_OUTPUT_PORT_TYPE
+
+

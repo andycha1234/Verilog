@@ -1,0 +1,25 @@
+|mux4to1
+u[0] => Mux1.IN0
+u[1] => Mux0.IN0
+v[0] => Mux1.IN1
+v[1] => Mux0.IN1
+w[0] => Mux1.IN2
+w[1] => Mux0.IN2
+x[0] => Mux1.IN3
+x[1] => Mux0.IN3
+s[0] => Mux0.IN5
+s[0] => Mux1.IN5
+s[1] => Mux0.IN4
+s[1] => Mux1.IN4
+m[0] << Mux1.DB_MAX_OUTPUT_PORT_TYPE
+m[1] << Mux0.DB_MAX_OUTPUT_PORT_TYPE
+led[2] << <GND>
+led[3] << <GND>
+led[4] << <GND>
+led[5] << <GND>
+led[6] << <GND>
+led[7] << <GND>
+led[8] << <GND>
+led[9] << <GND>
+
+
