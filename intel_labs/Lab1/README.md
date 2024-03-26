@@ -1,5 +1,3 @@
-# Intel Labs with Quartus Prime
+FPGA used for this lab is a Terasic DE0-Lite
 
-Reference: https://fpgacademy.org/courses.html
-
-additional sources for learning FPGA on intel home page: https://www.intel.com/content/www/us/en/developer/topic-technology/fpga-academic/materials.html
+Board and User manual can be found here: https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&No=1021
