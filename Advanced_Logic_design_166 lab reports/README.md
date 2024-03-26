@@ -1,4 +1,4 @@
-#CSUS 166 Advanced Logic Design
+# CSUS 166 Advanced Logic Design
 
 VHDL and Verilog Hardware Description Languages are studied and used on the following advanced level logic design topics: 
 - synchronous state machines
