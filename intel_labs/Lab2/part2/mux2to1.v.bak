@@ -1,0 +1,7 @@
+module(x, y, s, m);
+input [3:0] x, y;
+input s;
+
+output m;
+
+endmodule
