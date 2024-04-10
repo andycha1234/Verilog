@@ -1,0 +1,91 @@
+|ripple_carry_adder
+SW[0] => b[0].IN1
+SW[1] => b[1].IN1
+SW[2] => b[2].IN1
+SW[3] => b[3].IN1
+SW[4] => a[0].IN1
+SW[5] => a[1].IN1
+SW[6] => a[2].IN1
+SW[7] => a[3].IN1
+SW[8] => cin.IN1
+SW[9] => ~NO_FANOUT~
+LEDR[0] <= full_adder:f0.s
+LEDR[1] <= full_adder:f1.s
+LEDR[2] <= full_adder:f2.s
+LEDR[3] <= full_adder:f3.s
+LEDR[4] <= full_adder:f3.co
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+
+
+|ripple_carry_adder|full_adder:f0
+a => comb.IN0
+a => s.IN0
+b => b.IN1
+ci => ci.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= mux2to1:G0.m
+
+
+|ripple_carry_adder|full_adder:f0|mux2to1:G0
+x => m.IN0
+y => m.IN0
+s => m.IN1
+s => m.IN1
+m <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripple_carry_adder|full_adder:f1
+a => comb.IN0
+a => s.IN0
+b => b.IN1
+ci => ci.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= mux2to1:G0.m
+
+
+|ripple_carry_adder|full_adder:f1|mux2to1:G0
+x => m.IN0
+y => m.IN0
+s => m.IN1
+s => m.IN1
+m <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripple_carry_adder|full_adder:f2
+a => comb.IN0
+a => s.IN0
+b => b.IN1
+ci => ci.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= mux2to1:G0.m
+
+
+|ripple_carry_adder|full_adder:f2|mux2to1:G0
+x => m.IN0
+y => m.IN0
+s => m.IN1
+s => m.IN1
+m <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripple_carry_adder|full_adder:f3
+a => comb.IN0
+a => s.IN0
+b => b.IN1
+ci => ci.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= mux2to1:G0.m
+
+
+|ripple_carry_adder|full_adder:f3|mux2to1:G0
+x => m.IN0
+y => m.IN0
+s => m.IN1
+s => m.IN1
+m <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+

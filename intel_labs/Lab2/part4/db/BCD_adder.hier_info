@@ -1,0 +1,498 @@
+|BCD_adder
+SW[0] => Y[0].IN3
+SW[1] => Y[1].IN3
+SW[2] => Y[2].IN3
+SW[3] => Y[3].IN3
+SW[4] => X[0].IN3
+SW[5] => X[1].IN3
+SW[6] => X[2].IN3
+SW[7] => X[3].IN3
+SW[8] => SW[8].IN1
+SW[9] => SW[9].IN1
+LEDR[0] <= S[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= S[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= S[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] <= S[3].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[4] <= S[4].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] <= char_7seg:H8.segment
+HEX0[5] <= char_7seg:H8.segment
+HEX0[4] <= char_7seg:H8.segment
+HEX0[3] <= char_7seg:H8.segment
+HEX0[2] <= char_7seg:H8.segment
+HEX0[1] <= char_7seg:H8.segment
+HEX0[0] <= char_7seg:H8.segment
+HEX1[6] <= char_7seg:H3.segment
+HEX1[5] <= char_7seg:H3.segment
+HEX1[4] <= char_7seg:H3.segment
+HEX1[3] <= char_7seg:H3.segment
+HEX1[2] <= char_7seg:H3.segment
+HEX1[1] <= char_7seg:H3.segment
+HEX1[0] <= char_7seg:H3.segment
+HEX3[6] <= char_7seg:G2.segment
+HEX3[5] <= char_7seg:G2.segment
+HEX3[4] <= char_7seg:G2.segment
+HEX3[3] <= char_7seg:G2.segment
+HEX3[2] <= char_7seg:G2.segment
+HEX3[1] <= char_7seg:G2.segment
+HEX3[0] <= char_7seg:G2.segment
+HEX5[6] <= char_7seg:U2.segment
+HEX5[5] <= char_7seg:U2.segment
+HEX5[4] <= char_7seg:U2.segment
+HEX5[3] <= char_7seg:U2.segment
+HEX5[2] <= char_7seg:U2.segment
+HEX5[1] <= char_7seg:U2.segment
+HEX5[0] <= char_7seg:U2.segment
+
+
+|BCD_adder|comparator:U0
+v[0] => ~NO_FANOUT~
+v[1] => z.IN0
+v[2] => z.IN0
+v[3] => z.IN1
+v[3] => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_adder|mux2to1:U1
+x[0] => m.IN0
+x[1] => m.IN0
+x[2] => m.IN0
+x[3] => m.IN0
+y[0] => m.IN0
+y[1] => m.IN0
+y[2] => m.IN0
+y[3] => m.IN0
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+m[0] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[1] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[2] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[3] <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_adder|char_7seg:U2
+C[0] => segment.IN1
+C[0] => segment.IN1
+C[0] => segment.IN0
+C[0] => segment.IN1
+C[0] => segment.IN1
+C[0] => segment.IN1
+C[0] => segment.IN0
+C[0] => segment.IN1
+C[0] => segment.IN1
+C[0] => segment.IN1
+C[0] => segment.IN1
+C[1] => segment.IN0
+C[1] => segment.IN0
+C[1] => segment.IN0
+C[1] => segment.IN1
+C[1] => segment.IN1
+C[1] => segment.IN0
+C[1] => segment.IN0
+C[2] => segment.IN0
+C[2] => segment.IN1
+C[2] => segment.IN1
+C[2] => segment.IN0
+C[2] => segment.IN1
+C[2] => segment.IN1
+C[3] => segment.IN1
+C[3] => segment.IN1
+C[3] => segment.IN1
+C[3] => segment.IN1
+segment[6] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[0] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_adder|comparator:G0
+v[0] => ~NO_FANOUT~
+v[1] => z.IN0
+v[2] => z.IN0
+v[3] => z.IN1
+v[3] => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_adder|mux2to1:G1
+x[0] => m.IN0
+x[1] => m.IN0
+x[2] => m.IN0
+x[3] => m.IN0
+y[0] => m.IN0
+y[1] => m.IN0
+y[2] => m.IN0
+y[3] => m.IN0
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+m[0] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[1] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[2] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[3] <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_adder|char_7seg:G2
+C[0] => segment.IN1
+C[0] => segment.IN1
+C[0] => segment.IN0
+C[0] => segment.IN1
+C[0] => segment.IN1
+C[0] => segment.IN1
+C[0] => segment.IN0
+C[0] => segment.IN1
+C[0] => segment.IN1
+C[0] => segment.IN1
+C[0] => segment.IN1
+C[1] => segment.IN0
+C[1] => segment.IN0
+C[1] => segment.IN0
+C[1] => segment.IN1
+C[1] => segment.IN1
+C[1] => segment.IN0
+C[1] => segment.IN0
+C[2] => segment.IN0
+C[2] => segment.IN1
+C[2] => segment.IN1
+C[2] => segment.IN0
+C[2] => segment.IN1
+C[2] => segment.IN1
+C[3] => segment.IN1
+C[3] => segment.IN1
+C[3] => segment.IN1
+C[3] => segment.IN1
+segment[6] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[0] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_adder|ripple_carry_adder:H0
+SW[0] => b[0].IN1
+SW[1] => b[1].IN1
+SW[2] => b[2].IN1
+SW[3] => b[3].IN1
+SW[4] => a[0].IN1
+SW[5] => a[1].IN1
+SW[6] => a[2].IN1
+SW[7] => a[3].IN1
+SW[8] => cin.IN1
+SW[9] => ~NO_FANOUT~
+LEDR[0] <= full_adder:f0.s
+LEDR[1] <= full_adder:f1.s
+LEDR[2] <= full_adder:f2.s
+LEDR[3] <= full_adder:f3.s
+LEDR[4] <= full_adder:f3.co
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+
+
+|BCD_adder|ripple_carry_adder:H0|full_adder:f0
+a => comb.IN0
+a => s.IN0
+b => b.IN1
+ci => ci.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= mux2to1:G0.m
+
+
+|BCD_adder|ripple_carry_adder:H0|full_adder:f0|mux2to1:G0
+x[0] => m.IN0
+x[1] => m.IN0
+x[2] => m.IN0
+x[3] => m.IN0
+y[0] => m.IN0
+y[1] => m.IN0
+y[2] => m.IN0
+y[3] => m.IN0
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+m[0] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[1] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[2] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[3] <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_adder|ripple_carry_adder:H0|full_adder:f1
+a => comb.IN0
+a => s.IN0
+b => b.IN1
+ci => ci.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= mux2to1:G0.m
+
+
+|BCD_adder|ripple_carry_adder:H0|full_adder:f1|mux2to1:G0
+x[0] => m.IN0
+x[1] => m.IN0
+x[2] => m.IN0
+x[3] => m.IN0
+y[0] => m.IN0
+y[1] => m.IN0
+y[2] => m.IN0
+y[3] => m.IN0
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+m[0] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[1] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[2] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[3] <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_adder|ripple_carry_adder:H0|full_adder:f2
+a => comb.IN0
+a => s.IN0
+b => b.IN1
+ci => ci.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= mux2to1:G0.m
+
+
+|BCD_adder|ripple_carry_adder:H0|full_adder:f2|mux2to1:G0
+x[0] => m.IN0
+x[1] => m.IN0
+x[2] => m.IN0
+x[3] => m.IN0
+y[0] => m.IN0
+y[1] => m.IN0
+y[2] => m.IN0
+y[3] => m.IN0
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+m[0] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[1] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[2] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[3] <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_adder|ripple_carry_adder:H0|full_adder:f3
+a => comb.IN0
+a => s.IN0
+b => b.IN1
+ci => ci.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= mux2to1:G0.m
+
+
+|BCD_adder|ripple_carry_adder:H0|full_adder:f3|mux2to1:G0
+x[0] => m.IN0
+x[1] => m.IN0
+x[2] => m.IN0
+x[3] => m.IN0
+y[0] => m.IN0
+y[1] => m.IN0
+y[2] => m.IN0
+y[3] => m.IN0
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+m[0] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[1] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[2] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[3] <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_adder|comparator:H1
+v[0] => ~NO_FANOUT~
+v[1] => z.IN0
+v[2] => z.IN0
+v[3] => z.IN1
+v[3] => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_adder|char_7seg:H3
+C[0] => segment.IN1
+C[0] => segment.IN1
+C[0] => segment.IN0
+C[0] => segment.IN1
+C[0] => segment.IN1
+C[0] => segment.IN1
+C[0] => segment.IN0
+C[0] => segment.IN1
+C[0] => segment.IN1
+C[0] => segment.IN1
+C[0] => segment.IN1
+C[1] => segment.IN0
+C[1] => segment.IN0
+C[1] => segment.IN0
+C[1] => segment.IN1
+C[1] => segment.IN1
+C[1] => segment.IN0
+C[1] => segment.IN0
+C[2] => segment.IN0
+C[2] => segment.IN1
+C[2] => segment.IN1
+C[2] => segment.IN0
+C[2] => segment.IN1
+C[2] => segment.IN1
+C[3] => segment.IN1
+C[3] => segment.IN1
+C[3] => segment.IN1
+C[3] => segment.IN1
+segment[6] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[0] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_adder|circuitA:H4
+v[0] => a[0].DATAIN
+v[1] => a.IN0
+v[1] => a[1].DATAIN
+v[2] => a.IN1
+v[3] => a[3].DATAIN
+a[0] <= v[0].DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= v[1].DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= a.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= v[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_adder|mux2to1:H5
+x[0] => m.IN0
+x[1] => m.IN0
+x[2] => m.IN0
+x[3] => m.IN0
+y[0] => m.IN0
+y[1] => m.IN0
+y[2] => m.IN0
+y[3] => m.IN0
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+m[0] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[1] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[2] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[3] <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_adder|circuitB:H6
+v[0] => b[0].DATAIN
+v[1] => b[3].DATAIN
+v[1] => b[2].DATAIN
+v[1] => b[1].DATAIN
+v[2] => ~NO_FANOUT~
+v[3] => ~NO_FANOUT~
+b[0] <= v[0].DB_MAX_OUTPUT_PORT_TYPE
+b[1] <= v[1].DB_MAX_OUTPUT_PORT_TYPE
+b[2] <= v[1].DB_MAX_OUTPUT_PORT_TYPE
+b[3] <= v[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_adder|mux2to1:H7
+x[0] => m.IN0
+x[1] => m.IN0
+x[2] => m.IN0
+x[3] => m.IN0
+y[0] => m.IN0
+y[1] => m.IN0
+y[2] => m.IN0
+y[3] => m.IN0
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+m[0] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[1] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[2] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[3] <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_adder|char_7seg:H8
+C[0] => segment.IN1
+C[0] => segment.IN1
+C[0] => segment.IN0
+C[0] => segment.IN1
+C[0] => segment.IN1
+C[0] => segment.IN1
+C[0] => segment.IN0
+C[0] => segment.IN1
+C[0] => segment.IN1
+C[0] => segment.IN1
+C[0] => segment.IN1
+C[1] => segment.IN0
+C[1] => segment.IN0
+C[1] => segment.IN0
+C[1] => segment.IN1
+C[1] => segment.IN1
+C[1] => segment.IN0
+C[1] => segment.IN0
+C[2] => segment.IN0
+C[2] => segment.IN1
+C[2] => segment.IN1
+C[2] => segment.IN0
+C[2] => segment.IN1
+C[2] => segment.IN1
+C[3] => segment.IN1
+C[3] => segment.IN1
+C[3] => segment.IN1
+C[3] => segment.IN1
+segment[6] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[0] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,11 @@
+module ripple_carry_adder(SW, LEDR);
+input [9:0] SW;
+
+output [9:0] LEDR;
+
+full_adder U0();
+full_adder U1();
+full_adder U2();
+full_adder U3();
+
+endmodule
