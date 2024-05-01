@@ -1,0 +1,32 @@
+|part4
+D => D.IN3
+Clock => Clock.IN3
+Qa << D_latch:U0.Q
+not_Qa << D_latch:U0.not_Q
+Qb << posedge_Dflipflop:U1.Q
+not_Qb << posedge_Dflipflop:U1.not_Q
+Qc << negedge_Dflipflop:U2.Q
+not_Qc << negedge_Dflipflop:U2.not_Q
+
+
+|part4|D_latch:U0
+D => Q$latch.DATAIN
+Clk => Q$latch.LATCH_ENABLE
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+not_Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part4|posedge_Dflipflop:U1
+D => Q~reg0.DATAIN
+Clk => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+not_Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part4|negedge_Dflipflop:U2
+D => Q~reg0.DATAIN
+Clk => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+not_Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

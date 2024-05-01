@@ -1,0 +1,60 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/chaan/Documents/Quartus/Intel Digital Logic Labs/Lab3/part1/simulation/modelsim
+vRS_latch
+Z1 !s110 1712856905
+!i10b 1
+!s100 f_fgS42FnDEl=kJN<imo>1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I:=[I15PiQ13KWS:f=CDW[1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1712854748
+8C:/Users/chaan/Documents/Quartus/Intel Digital Logic Labs/Lab3/part1/RS_latch.v
+FC:/Users/chaan/Documents/Quartus/Intel Digital Logic Labs/Lab3/part1/RS_latch.v
+!i122 0
+L0 2 10
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1712856905.000000
+!s107 C:/Users/chaan/Documents/Quartus/Intel Digital Logic Labs/Lab3/part1/RS_latch.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/chaan/Documents/Quartus/Intel Digital Logic Labs/Lab3/part1|C:/Users/chaan/Documents/Quartus/Intel Digital Logic Labs/Lab3/part1/RS_latch.v|
+!i113 1
+Z6 o-vlog01compat -work work
+Z7 !s92 -vlog01compat -work work {+incdir+C:/Users/chaan/Documents/Quartus/Intel Digital Logic Labs/Lab3/part1}
+Z8 tCvgOpt 0
+n@r@s_latch
+vtestbench
+R1
+!i10b 1
+!s100 PYQO_MQKbE2I8NNgj``Ja0
+R2
+IXDR]mmNNQ[^g3z=:=ZVH73
+R3
+R0
+w1712856282
+8C:/Users/chaan/Documents/Quartus/Intel Digital Logic Labs/Lab3/part1/testbench.v
+FC:/Users/chaan/Documents/Quartus/Intel Digital Logic Labs/Lab3/part1/testbench.v
+!i122 1
+L0 3 26
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/chaan/Documents/Quartus/Intel Digital Logic Labs/Lab3/part1/testbench.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/chaan/Documents/Quartus/Intel Digital Logic Labs/Lab3/part1|C:/Users/chaan/Documents/Quartus/Intel Digital Logic Labs/Lab3/part1/testbench.v|
+!i113 1
+R6
+R7
+R8

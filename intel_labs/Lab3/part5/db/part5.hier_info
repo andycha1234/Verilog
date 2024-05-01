@@ -1,0 +1,213 @@
+|part5
+SW[0] => Add1.IN8
+SW[0] => B.DATAB
+SW[0] => A[0].DATAIN
+SW[1] => Add1.IN7
+SW[1] => B.DATAB
+SW[1] => A[1].DATAIN
+SW[2] => Add1.IN6
+SW[2] => B.DATAB
+SW[2] => A[2].DATAIN
+SW[3] => Add1.IN5
+SW[3] => B.DATAB
+SW[3] => A[3].DATAIN
+SW[4] => Add1.IN4
+SW[4] => B.DATAB
+SW[4] => A[4].DATAIN
+SW[5] => Add1.IN3
+SW[5] => B.DATAB
+SW[5] => A[5].DATAIN
+SW[6] => Add1.IN2
+SW[6] => B.DATAB
+SW[6] => A[6].DATAIN
+SW[7] => Add1.IN1
+SW[7] => B.DATAB
+SW[7] => A[7].DATAIN
+LEDR[0] <= LessThan38.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= <GND>
+LEDR[2] <= <GND>
+LEDR[3] <= <GND>
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+KEY[0] => B[0].ACLR
+KEY[0] => B[1].ACLR
+KEY[0] => B[2].ACLR
+KEY[0] => B[3].ACLR
+KEY[0] => B[4].ACLR
+KEY[0] => B[5].ACLR
+KEY[0] => B[6].ACLR
+KEY[0] => B[7].ACLR
+KEY[0] => A[0].ACLR
+KEY[0] => A[1].ACLR
+KEY[0] => A[2].ACLR
+KEY[0] => A[3].ACLR
+KEY[0] => A[4].ACLR
+KEY[0] => A[5].ACLR
+KEY[0] => A[6].ACLR
+KEY[0] => A[7].ACLR
+KEY[0] => count.ACLR
+KEY[0] => S[0].ACLR
+KEY[0] => S[1].ACLR
+KEY[0] => S[2].ACLR
+KEY[0] => S[3].ACLR
+KEY[0] => S[4].ACLR
+KEY[0] => S[5].ACLR
+KEY[0] => S[6].ACLR
+KEY[0] => S[7].ACLR
+KEY[1] => B[0].CLK
+KEY[1] => B[1].CLK
+KEY[1] => B[2].CLK
+KEY[1] => B[3].CLK
+KEY[1] => B[4].CLK
+KEY[1] => B[5].CLK
+KEY[1] => B[6].CLK
+KEY[1] => B[7].CLK
+KEY[1] => A[0].CLK
+KEY[1] => A[1].CLK
+KEY[1] => A[2].CLK
+KEY[1] => A[3].CLK
+KEY[1] => A[4].CLK
+KEY[1] => A[5].CLK
+KEY[1] => A[6].CLK
+KEY[1] => A[7].CLK
+KEY[1] => count.CLK
+KEY[1] => S[0].CLK
+KEY[1] => S[1].CLK
+KEY[1] => S[2].CLK
+KEY[1] => S[3].CLK
+KEY[1] => S[4].CLK
+KEY[1] => S[5].CLK
+KEY[1] => S[6].CLK
+KEY[1] => S[7].CLK
+HEX0[6] <= char_7seg:H1.segment
+HEX0[5] <= char_7seg:H1.segment
+HEX0[4] <= char_7seg:H1.segment
+HEX0[3] <= char_7seg:H1.segment
+HEX0[2] <= char_7seg:H1.segment
+HEX0[1] <= char_7seg:H1.segment
+HEX0[0] <= char_7seg:H1.segment
+HEX1[6] <= char_7seg:H0.segment
+HEX1[5] <= char_7seg:H0.segment
+HEX1[4] <= char_7seg:H0.segment
+HEX1[3] <= char_7seg:H0.segment
+HEX1[2] <= char_7seg:H0.segment
+HEX1[1] <= char_7seg:H0.segment
+HEX1[0] <= char_7seg:H0.segment
+HEX2[6] <= char_7seg:H3.segment
+HEX2[5] <= char_7seg:H3.segment
+HEX2[4] <= char_7seg:H3.segment
+HEX2[3] <= char_7seg:H3.segment
+HEX2[2] <= char_7seg:H3.segment
+HEX2[1] <= char_7seg:H3.segment
+HEX2[0] <= char_7seg:H3.segment
+HEX3[6] <= char_7seg:H2.segment
+HEX3[5] <= char_7seg:H2.segment
+HEX3[4] <= char_7seg:H2.segment
+HEX3[3] <= char_7seg:H2.segment
+HEX3[2] <= char_7seg:H2.segment
+HEX3[1] <= char_7seg:H2.segment
+HEX3[0] <= char_7seg:H2.segment
+HEX4[6] <= char_7seg:H5.segment
+HEX4[5] <= char_7seg:H5.segment
+HEX4[4] <= char_7seg:H5.segment
+HEX4[3] <= char_7seg:H5.segment
+HEX4[2] <= char_7seg:H5.segment
+HEX4[1] <= char_7seg:H5.segment
+HEX4[0] <= char_7seg:H5.segment
+HEX5[6] <= char_7seg:H4.segment
+HEX5[5] <= char_7seg:H4.segment
+HEX5[4] <= char_7seg:H4.segment
+HEX5[3] <= char_7seg:H4.segment
+HEX5[2] <= char_7seg:H4.segment
+HEX5[1] <= char_7seg:H4.segment
+HEX5[0] <= char_7seg:H4.segment
+
+
+|part5|char_7seg:H0
+C[0] => Decoder0.IN3
+C[1] => Decoder0.IN2
+C[2] => Decoder0.IN1
+C[3] => Decoder0.IN0
+segment[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segment[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|char_7seg:H1
+C[0] => Decoder0.IN3
+C[1] => Decoder0.IN2
+C[2] => Decoder0.IN1
+C[3] => Decoder0.IN0
+segment[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segment[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|char_7seg:H2
+C[0] => Decoder0.IN3
+C[1] => Decoder0.IN2
+C[2] => Decoder0.IN1
+C[3] => Decoder0.IN0
+segment[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segment[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|char_7seg:H3
+C[0] => Decoder0.IN3
+C[1] => Decoder0.IN2
+C[2] => Decoder0.IN1
+C[3] => Decoder0.IN0
+segment[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segment[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|char_7seg:H4
+C[0] => Decoder0.IN3
+C[1] => Decoder0.IN2
+C[2] => Decoder0.IN1
+C[3] => Decoder0.IN0
+segment[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segment[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|char_7seg:H5
+C[0] => Decoder0.IN3
+C[1] => Decoder0.IN2
+C[2] => Decoder0.IN1
+C[3] => Decoder0.IN0
+segment[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segment[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
