@@ -1,0 +1,14 @@
+module counter(Clock);
+input Clock
+
+output reg [3:0] Q;
+
+
+always@(posedge Clock) begin
+	if(Q < 10)
+		Q = Q + 1;
+	else
+		Q = 0;
+end
+
+endmodule

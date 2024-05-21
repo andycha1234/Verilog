@@ -1,0 +1,114 @@
+|part1
+SW[0] => Clear.IN8
+SW[1] => Enable.IN1
+LEDR[0] <= Clear.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= Enable.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= <GND>
+LEDR[3] <= <GND>
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+KEY0 => Clock.IN8
+HEX0[6] <= char_7seg:H5.segment
+HEX0[5] <= char_7seg:H5.segment
+HEX0[4] <= char_7seg:H5.segment
+HEX0[3] <= char_7seg:H5.segment
+HEX0[2] <= char_7seg:H5.segment
+HEX0[1] <= char_7seg:H5.segment
+HEX0[0] <= char_7seg:H5.segment
+HEX1[6] <= char_7seg:H4.segment
+HEX1[5] <= char_7seg:H4.segment
+HEX1[4] <= char_7seg:H4.segment
+HEX1[3] <= char_7seg:H4.segment
+HEX1[2] <= char_7seg:H4.segment
+HEX1[1] <= char_7seg:H4.segment
+HEX1[0] <= char_7seg:H4.segment
+
+
+|part1|char_7seg:H4
+C[0] => Decoder0.IN3
+C[1] => Decoder0.IN2
+C[2] => Decoder0.IN1
+C[3] => Decoder0.IN0
+segment[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segment[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|char_7seg:H5
+C[0] => Decoder0.IN3
+C[1] => Decoder0.IN2
+C[2] => Decoder0.IN1
+C[3] => Decoder0.IN0
+segment[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segment[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|T_Flipflop:U0
+T => Q~reg0.ENA
+clk => Q~reg0.CLK
+rst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|T_Flipflop:U1
+T => Q~reg0.ENA
+clk => Q~reg0.CLK
+rst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|T_Flipflop:U2
+T => Q~reg0.ENA
+clk => Q~reg0.CLK
+rst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|T_Flipflop:U3
+T => Q~reg0.ENA
+clk => Q~reg0.CLK
+rst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|T_Flipflop:U4
+T => Q~reg0.ENA
+clk => Q~reg0.CLK
+rst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|T_Flipflop:U5
+T => Q~reg0.ENA
+clk => Q~reg0.CLK
+rst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|T_Flipflop:U6
+T => Q~reg0.ENA
+clk => Q~reg0.CLK
+rst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|T_Flipflop:U7
+T => Q~reg0.ENA
+clk => Q~reg0.CLK
+rst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

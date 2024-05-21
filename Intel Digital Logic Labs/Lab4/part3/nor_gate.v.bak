@@ -1,0 +1,9 @@
+module nor_gate(count, E);
+input [25:0] counter;
+
+output E;
+
+//acts as a reduction operator, OR every bit
+assign E = ~(|counter);
+
+endmodule

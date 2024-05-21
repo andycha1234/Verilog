@@ -1,0 +1,125 @@
+|part3
+clk => clk.IN2
+HEX0[6] << char_7seg:H3.segment
+HEX0[5] << char_7seg:H3.segment
+HEX0[4] << char_7seg:H3.segment
+HEX0[3] << char_7seg:H3.segment
+HEX0[2] << char_7seg:H3.segment
+HEX0[1] << char_7seg:H3.segment
+HEX0[0] << char_7seg:H3.segment
+
+
+|part3|counter:H0
+Clock => counter[0]~reg0.CLK
+Clock => counter[1]~reg0.CLK
+Clock => counter[2]~reg0.CLK
+Clock => counter[3]~reg0.CLK
+Clock => counter[4]~reg0.CLK
+Clock => counter[5]~reg0.CLK
+Clock => counter[6]~reg0.CLK
+Clock => counter[7]~reg0.CLK
+Clock => counter[8]~reg0.CLK
+Clock => counter[9]~reg0.CLK
+Clock => counter[10]~reg0.CLK
+Clock => counter[11]~reg0.CLK
+Clock => counter[12]~reg0.CLK
+Clock => counter[13]~reg0.CLK
+Clock => counter[14]~reg0.CLK
+Clock => counter[15]~reg0.CLK
+Clock => counter[16]~reg0.CLK
+Clock => counter[17]~reg0.CLK
+Clock => counter[18]~reg0.CLK
+Clock => counter[19]~reg0.CLK
+Clock => counter[20]~reg0.CLK
+Clock => counter[21]~reg0.CLK
+Clock => counter[22]~reg0.CLK
+Clock => counter[23]~reg0.CLK
+Clock => counter[24]~reg0.CLK
+Clock => counter[25]~reg0.CLK
+counter[0] <= counter[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[1] <= counter[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[2] <= counter[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[3] <= counter[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[4] <= counter[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[5] <= counter[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[6] <= counter[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[7] <= counter[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[8] <= counter[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[9] <= counter[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[10] <= counter[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[11] <= counter[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[12] <= counter[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[13] <= counter[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[14] <= counter[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[15] <= counter[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[16] <= counter[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[17] <= counter[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[18] <= counter[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[19] <= counter[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[20] <= counter[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[21] <= counter[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[22] <= counter[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[23] <= counter[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[24] <= counter[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[25] <= counter[25]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part3|nor_gate:H1
+counter[0] => WideOr0.IN0
+counter[1] => WideOr0.IN1
+counter[2] => WideOr0.IN2
+counter[3] => WideOr0.IN3
+counter[4] => WideOr0.IN4
+counter[5] => WideOr0.IN5
+counter[6] => WideOr0.IN6
+counter[7] => WideOr0.IN7
+counter[8] => WideOr0.IN8
+counter[9] => WideOr0.IN9
+counter[10] => WideOr0.IN10
+counter[11] => WideOr0.IN11
+counter[12] => WideOr0.IN12
+counter[13] => WideOr0.IN13
+counter[14] => WideOr0.IN14
+counter[15] => WideOr0.IN15
+counter[16] => WideOr0.IN16
+counter[17] => WideOr0.IN17
+counter[18] => WideOr0.IN18
+counter[19] => WideOr0.IN19
+counter[20] => WideOr0.IN20
+counter[21] => WideOr0.IN21
+counter[22] => WideOr0.IN22
+counter[23] => WideOr0.IN23
+counter[24] => WideOr0.IN24
+counter[25] => WideOr0.IN25
+E <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part3|smaller_counter:H2
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Clock => Q[3]~reg0.CLK
+E => Q[1]~reg0.ENA
+E => Q[0]~reg0.ENA
+E => Q[2]~reg0.ENA
+E => Q[3]~reg0.ENA
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part3|char_7seg:H3
+C[0] => Decoder0.IN3
+C[1] => Decoder0.IN2
+C[2] => Decoder0.IN1
+C[3] => Decoder0.IN0
+segment[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segment[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

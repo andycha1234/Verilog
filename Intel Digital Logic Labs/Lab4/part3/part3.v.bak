@@ -1,0 +1,21 @@
+module part2(clk, HEX0);
+input [3:0] clk;
+
+output [0:6] HEX0;
+
+wire [0:6] seg0;
+
+reg [3:0] Q;
+
+assign HEX0 = seg0;
+
+always@(posedge clk) begin
+	if(Q < 10)
+		Q = Q + 1;
+	else
+		Q = 0;
+end
+
+char_7seg H5( .C(Q[3:0]), .segment(seg0) );
+
+endmodule

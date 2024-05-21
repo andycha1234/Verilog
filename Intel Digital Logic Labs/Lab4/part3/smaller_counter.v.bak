@@ -1,0 +1,14 @@
+module smaller_counter (Clock, E, Q);
+input Clock;
+input E;
+
+output reg [3:0] Q;
+
+always@(posedge Clock) begin
+	if(E == 1 && Q < 10)
+		Q = Q + 1;
+	else
+		Q = 0;
+end
+
+endmodule

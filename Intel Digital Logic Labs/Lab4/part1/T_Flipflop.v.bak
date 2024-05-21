@@ -1,0 +1,18 @@
+module T_Flipflop (T, clk, rst, Q, not_Q);
+input T, clk, rst;
+
+output reg Q;
+output reg not_Q;
+
+always@(posedge clk) begin
+	if(rst == 0)
+		Q <= 0;
+	else
+		if(T == 1)
+			Q <= ~Q;
+		else
+			Q <= Q
+		
+end
+
+endmodule

@@ -1,0 +1,7 @@
+module part1 (SW, HEX0, HEX1);
+input [1:0] SW;
+
+output [0:6] HEX0, HEX1;
+
+
+endmodule
