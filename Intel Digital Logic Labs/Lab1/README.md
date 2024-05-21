@@ -1,4 +1,4 @@
-#Switches, Lights, and Multiplexers
+# Switches, Lights, and Multiplexers
 
 FPGA: Terasic DE0-Lite
 
