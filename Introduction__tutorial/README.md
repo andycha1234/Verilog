@@ -1,3 +1,3 @@
-These labs can be found here Intel Academic Program Teaching Materials > Tutorial: https://fpgacademy.org/tutorials.html
+# Intel Digital Logic Labs with Quartus Prime
 
-For more learning courses, refer to Intels home page: https://www.intel.com/content/www/us/en/developer/topic-technology/fpga-academic/materials.html
+Introduction labs through Intel Academic Program Teaching Materials > Tutorial: https://fpgacademy.org/tutorials.html
