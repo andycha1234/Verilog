@@ -1,0 +1,38 @@
+// 2nd counter for min
+module smaller_counter_seg6 (Clock, Stop, counter, counter2, counter3, counter4, counter5, E, Q, rollover);
+parameter n = 4;
+parameter k = 20;
+
+input E, Clock, Stop, counter, counter2, counter3, counter4, counter5;
+
+output [n-1:0] Q;
+output rollover;
+
+reg [n-1:0] Q;
+reg rollover;
+
+always @(posedge Clock) begin
+	/*
+	if (!Reset_n)
+		Q <= 0;
+	*/
+	if (E == 1) begin
+		//If HEX4, HEX3, HEX2, HEX1, HEX0 are 9, then increment counter
+		if(counter == 1 && counter2 == 1 && counter3 == 1 && counter4 == 1 && counter5 == 1) begin
+			if(Q == (k-1)) begin
+				Q <= 0;
+				rollover <= 0;
+			end
+			else if (Q == (k-2)) begin
+			Q <= Q + 1;
+			rollover <= 1;
+			end
+			else begin
+				Q <= Q + 1;
+				rollover <= 0;
+			end
+		end
+	end
+end
+
+endmodule

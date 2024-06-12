@@ -1,0 +1,72 @@
+//counter for first digit of mins
+//seg2 for now, REPLACE LATERRR
+module smaller_counter_seg4 (Clock, Stop, counter, E, Q, rollover, set, set_num, send_num);
+parameter n = 4;
+parameter k = 20;
+
+input E, Clock, Stop, counter, set;
+input [3:0] set_num;
+
+output [n-1:0] Q;
+output rollover;
+output [3:0] send_num;
+
+
+reg [n-1:0] Q;
+reg rollover;
+reg [3:0] send_num;
+
+always @(posedge Clock, negedge Stop, posedge set) begin
+	//if KEY0 is pressed, stop counter
+	if (!Stop) begin
+		Q <= Q;
+		//rollover <= 0;
+	end
+	//if KEY1 is pressed, set HEX5 and HEX4 to set number from SW[5:0]
+	else if(set == 1) begin
+		//calculate number to display on HEX4. Send_num will send number for HEX5
+		if(set_num < 10) begin
+			Q <= set_num;
+			send_num = 0;
+		end
+		else if(set_num > 9 && set_num < 20) begin
+			Q <= set_num - 10;
+			send_num = 1;
+		end
+		else if(set_num > 19 && set_num < 30) begin
+			Q <= set_num - 20;
+			send_num = 2;
+		end
+		else if(set_num > 29 && set_num < 40) begin
+			Q <= set_num - 30;
+			send_num = 3;
+		end
+		else if(set_num > 39 && set_num < 50) begin
+			Q <= set_num - 40;
+			send_num = 4;
+		end
+		else if(set_num > 49 && set_num < 60) begin
+			Q <= set_num - 50;
+			send_num = 5;
+		end
+	end
+	//increment counter as usual. 
+	else if (E == 1) begin
+		if(counter == 1) begin
+			if(Q == (k-1)) begin
+				Q <= 0;
+				rollover <= 0;
+			end
+			else if (Q == (k-2)) begin
+			Q <= Q + 1;
+			rollover <= 1;
+			end
+			else begin
+				Q <= Q + 1;
+				rollover <= 0;
+			end
+		end
+	end
+end
+
+endmodule

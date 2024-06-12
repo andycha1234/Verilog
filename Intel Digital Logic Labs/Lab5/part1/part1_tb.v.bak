@@ -1,0 +1,54 @@
+module part1_tb;
+reg [1:0] KEY;
+
+wire [9:0] LEDR;
+
+part1 DUT ( .KEY(KEY), .LEDR(LEDR) );
+
+initial begin
+KEY[0] = 0; KEY[1] = 0;
+#10
+KEY[0] = 1; KEY[1] = 0;
+#10
+KEY[0] = 1; KEY[1] = 0;
+#10
+KEY[0] = 1; KEY[1] = 0;
+#10
+KEY[0] = 1; KEY[1] = 0;
+#10
+KEY[0] = 1; KEY[1] = 0;
+#10
+KEY[0] = 1; KEY[1] = 0;
+#10
+KEY[0] = 1; KEY[1] = 0;
+#10
+KEY[0] = 1; KEY[1] = 0;
+#10
+KEY[0] = 1; KEY[1] = 0;
+#10
+KEY[0] = 1; KEY[1] = 0;
+#10
+KEY[0] = 1; KEY[1] = 0;
+#10
+KEY[0] = 1; KEY[1] = 0;
+#10
+KEY[0] = 1; KEY[1] = 0;
+#10
+KEY[0] = 1; KEY[1] = 0;
+#10
+KEY[0] = 1; KEY[1] = 0;
+#10
+KEY[0] = 1; KEY[1] = 0;
+#10
+KEY[0] = 1; KEY[1] = 0;
+#10
+KEY[0] = 1; KEY[1] = 0;
+#10
+KEY[0] = 1; KEY[1] = 0;
+#10
+KEY[0] = 1; KEY[1] = 1;
+#10
+$finish;
+end
+
+endmodule

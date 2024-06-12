@@ -1,0 +1,7 @@
+module letter_selection_logic (letter, reset, select);
+input [2:0] letter;
+input reset;
+
+output [2:0] select;
+
+endmodule

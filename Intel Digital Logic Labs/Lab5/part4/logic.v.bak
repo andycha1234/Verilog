@@ -1,0 +1,20 @@
+module logic (Clock, display, E, reset, enable, Q);
+input Clock, display, E, reset;
+
+output enable;
+output Q;
+
+reg enable, Q;
+
+always@(negedge display) begin
+	if(reset == 0) begin
+		enable <= 0;
+		Q <= 0;
+	end
+	else begin
+		enable <= 1;
+	
+end
+
+
+endmodule 

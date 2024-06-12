@@ -1,0 +1,27 @@
+module letter_size_register (clock, data, enable, load, size);
+input [3:0] data
+input enable
+input load
+
+output [3:0] size;
+
+always@(posedge clock) begin
+	//enable from freq_counter
+	if(enable == 1) begin
+		//if KEY[1] is pressed, load letter
+		if(load == 0) begin
+			case(data) begin
+				4'b0001: size <= 2;
+				4'b1000: size <= 4;
+				4'b1010: size <= 4;
+				4'b0100: size <= 3;
+				4'b0000: size <= 1;
+				4'b0010: size <= 4;
+				4'b0110: size <= 3;
+				4'b0111: size <= 4;
+			end
+		end
+	end
+end
+
+endmodule

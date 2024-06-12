@@ -1,0 +1,17 @@
+module char_7seg (C, seg);
+input C;
+
+output [0:6] HEX;
+
+reg [0:6] segment
+
+always@(C) begin
+	case(C)
+		//display 0
+		1'b0: segment = 7'b0000001;
+		//display 1
+		1'b1: segment = 7'b1001111;
+	endcase
+end
+
+endmodule

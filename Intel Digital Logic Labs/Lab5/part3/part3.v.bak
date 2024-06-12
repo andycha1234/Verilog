@@ -1,0 +1,17 @@
+module part3 (clk, SW, LEDR, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5);
+input clk;
+input [9:0] SW;
+
+output [9:0] LEDR;
+output [0:6] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5;
+
+wire [0:6] seg0, seg1, seg2, seg3, seg4, seg5;
+
+assign HEX0 = seg0;
+assign HEX1 = seg1;
+assign HEX2 = seg2;
+assign HEX3 = seg3;
+assign HEX4 = seg4;
+assign HEX5 = seg5;
+
+endmodule

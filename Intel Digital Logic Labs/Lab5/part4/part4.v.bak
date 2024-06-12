@@ -1,0 +1,9 @@
+module part4 (SW, KEY, LEDR);
+input [2:0] SW;
+input [1:0] KEY;
+
+output LEDR[0];
+
+
+
+endmodule

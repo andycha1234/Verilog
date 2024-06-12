@@ -1,0 +1,16 @@
+module letter_symbols_shift_register (Clock, data, enable, load, size, symbol);
+input [3:0] data, size;
+input enable, load;
+
+output [3:0] symbol;
+
+reg [3:0] symbol;
+
+always@(posedge Clock) begin
+	//load symbol from switch
+	if(load == 1) begin
+		symbol << (4-size);
+	end
+end
+
+endmodule

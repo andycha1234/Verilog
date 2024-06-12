@@ -1,0 +1,26 @@
+//counter for hundredths of a second
+module two_bit_counter (Clock, enable, reset, Q);
+
+input Clock, enable, reset;
+
+output [n-1:0] Q;
+
+reg [n-1:0] Q;
+
+always @(posedge Clock) begin
+	//stop the clock until release
+	if (reset == 1) begin
+		Q <= 0;
+	end
+	//increment counter if enable = 1 from clock frequency
+	else if(enable == 1) begin
+		//if counter is 9, reset counter to 0 and rollover back to 0
+		if(Q == (k-1))
+			Q <= 0;
+		//increment counter
+		else
+			Q <= Q + 1;
+	end
+end
+
+endmodule

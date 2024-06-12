@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at two_bit_counter.v(13): always construct contains both blocking and non-blocking assignments File: C:/Users/chaan/Documents/Quartus/Intel Digital Logic Labs/Lab5/part4/two_bit_counter.v Line: 13

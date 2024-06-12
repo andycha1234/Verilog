@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at smaller_counter_seg5.v(19): always construct contains both blocking and non-blocking assignments File: C:/Users/chaan/Documents/Quartus/Intel Digital Logic Labs/Lab5/part3/smaller_counter_seg5.v Line: 19
