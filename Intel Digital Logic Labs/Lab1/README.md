@@ -14,3 +14,6 @@ Display character on Seven segment display
 
 ## Part 5
 Multiplexer with seven segment decoder
+
+## Part 6
+Multiple seven segment display
