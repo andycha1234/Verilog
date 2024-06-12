@@ -1,5 +1,16 @@
 # Switches, Lights, and Multiplexers
 
-FPGA: Terasic DE0-Lite
+## Part 1 
+Switch and LED connection
 
-Board and User manual: https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&No=1021
+## Part 2
+2-to-1 Multiplexer
+
+## Part 3
+4-to-1 Multiplexer
+
+## Part 4
+Display character on Seven segment display
+
+## Part 5
+Multiplexer with seven segment decoder
